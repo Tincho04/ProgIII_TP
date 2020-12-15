@@ -1,0 +1,601 @@
+{
+	"info": {
+		"_postman_id": "8d7cfe4e-98a6-4a68-905a-aadb2b88420c",
+		"name": "Comanda Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User-Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "Donato",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "Donato",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Di Santi",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "Chefo_D@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/users",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "Bartender",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/login",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mesa-Dispo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3QwMDIiLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoyfQ.WtcTej1NHLUL_Myza43iRs2FQ3mJNuaeUH1V8X3Dd3E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "restaurantetp.tk/mesa",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"mesa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu-getall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3QwMDIiLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoyfQ.WtcTej1NHLUL_Myza43iRs2FQ3mJNuaeUH1V8X3Dd3E"
+					}
+				],
+				"url": {
+					"raw": "restaurantetp.tk/menu",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order-add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3QwMDIiLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoyfQ.WtcTej1NHLUL_Myza43iRs2FQ3mJNuaeUH1V8X3Dd3E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table",
+							"value": "me004",
+							"type": "text"
+						},
+						{
+							"key": "cocina",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cocinacant",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "choper",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "chopercant",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "barra",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "barracant",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "candy",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "candycant",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/order",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reviso Pedido por empleado",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQmFydGVuZGVyIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6NH0.Zh_vfzb1RHrLaaOS8ZMjihWNveWHNbIN-lF07dyQprU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "restaurantetp.tk/pedidos",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizo Pedido por empleado",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQmFydGVuZGVyIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6NH0.Zh_vfzb1RHrLaaOS8ZMjihWNveWHNbIN-lF07dyQprU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedido",
+							"value": "t1xko",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/pedidos",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizado-Pedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQmFydGVuZGVyIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6NH0.Zh_vfzb1RHrLaaOS8ZMjihWNveWHNbIN-lF07dyQprU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedido",
+							"value": "t1xko",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/pedidofinalizado",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"pedidofinalizado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaPedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "restaurantetp.tk/pedidos/xp4d8",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"pedidos",
+						"xp4d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mozo-Sirve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiTW96b1NURCIsInBhc3N3b3JkIjoiMTIzNCIsInJvbGUiOiIzIn0.ykp7tndmsCB4fzNi2vC5Hc8BIb5gC7OwVzyQuL3nTPQ"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mesa",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "orden",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/servir",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"servir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta-Socio",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU29jaW9BIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6Mn0.gIvEO7_ZboZGno40CMvSR-bG79MSSL2e2dIKf63B1ew",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "restaurantetp.tk/revision",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"revision"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cobro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU29jaW9BIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6Mn0.gIvEO7_ZboZGno40CMvSR-bG79MSSL2e2dIKf63B1ew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mesa",
+							"value": "me001",
+							"type": "text"
+						},
+						{
+							"key": "orden",
+							"value": "vl9lg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/cobro",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"cobro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Orden",
+							"value": "yywoe",
+							"type": "text"
+						},
+						{
+							"key": "Nombre",
+							"value": "ElPepe",
+							"type": "text"
+						},
+						{
+							"key": "Mail",
+							"value": "ep@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "Descripcion",
+							"value": "muy buena atencion",
+							"type": "text"
+						},
+						{
+							"key": "Mesa",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "Restaurante",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "Atencion",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "Cocina",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/review",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visualizar Logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbTEyMyIsInJvbGUiOjF9.7xogljuQlVxhspY0tirqZuhzADjcOLpzFEsxgHlunJQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "restaurantetp.tk/logs",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Habilitar Mesa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbTEyMyIsInJvbGUiOjF9.7xogljuQlVxhspY0tirqZuhzADjcOLpzFEsxgHlunJQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mesa",
+							"value": "me004",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/habilitar",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"habilitar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbTEyMyIsInJvbGUiOjF9.7xogljuQlVxhspY0tirqZuhzADjcOLpzFEsxgHlunJQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user",
+							"value": "45",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "restaurantetp.tk/del/user/48",
+					"host": [
+						"restaurantetp",
+						"tk"
+					],
+					"path": [
+						"del",
+						"user",
+						"48"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

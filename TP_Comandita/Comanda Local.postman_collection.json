@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "0ffb7f89-e71b-48f2-8dc1-0c087749545c",
+		"name": "Comanda Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User-Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "Mozito",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "firstName",
+							"value": "mozz",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "Comanditero",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "moz@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "rol",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}users",
+					"host": [
+						"{{url}}users"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "usuario",
+							"value": "Mozito",
+							"type": "text"
+						},
+						{
+							"key": "clave",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}login",
+					"host": [
+						"{{url}}login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mesa-Dispo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3QwMDIiLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoyfQ.WtcTej1NHLUL_Myza43iRs2FQ3mJNuaeUH1V8X3Dd3E",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}mesa",
+					"host": [
+						"{{url}}mesa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menu-getall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3QwMDIiLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoyfQ.WtcTej1NHLUL_Myza43iRs2FQ3mJNuaeUH1V8X3Dd3E"
+					}
+				],
+				"url": {
+					"raw": "{{url}}menu",
+					"host": [
+						"{{url}}menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order-add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic3QwMDIiLCJwYXNzd29yZCI6IjEyMzQiLCJyb2xlIjoyfQ.WtcTej1NHLUL_Myza43iRs2FQ3mJNuaeUH1V8X3Dd3E",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table",
+							"value": "me003",
+							"type": "text"
+						},
+						{
+							"key": "cocina",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cocinacant",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "choper",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "chopercant",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "barra",
+							"value": "9",
+							"type": "text"
+						},
+						{
+							"key": "barracant",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "candy",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "candycant",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}order",
+					"host": [
+						"{{url}}order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bartender-Get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQmFydGVuZGVyIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6NH0.Zh_vfzb1RHrLaaOS8ZMjihWNveWHNbIN-lF07dyQprU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}pedidos",
+					"host": [
+						"{{url}}pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bartender-Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQmFydGVuZGVyIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6NH0.Zh_vfzb1RHrLaaOS8ZMjihWNveWHNbIN-lF07dyQprU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedido",
+							"value": "da5in",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}pedidos",
+					"host": [
+						"{{url}}pedidos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizado-Pedido",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQmFydGVuZGVyIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6NH0.Zh_vfzb1RHrLaaOS8ZMjihWNveWHNbIN-lF07dyQprU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "pedido",
+							"value": "da5in",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "cancelado",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}pedidofinalizado",
+					"host": [
+						"{{url}}pedidofinalizado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaPedido",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}pedidos/da5in",
+					"host": [
+						"{{url}}pedidos"
+					],
+					"path": [
+						"da5in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mozo-Sirve",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiTW96aXRvIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6M30.jlM_Tkga9e9pnqhbjrSJHLXZOQHKS9jd4aUJ8SBPEys",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mesa",
+							"value": "me003",
+							"type": "text"
+						},
+						{
+							"key": "orden",
+							"value": "da5in",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}servir",
+					"host": [
+						"{{url}}servir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta-Socio",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU29jaW9BIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6Mn0.gIvEO7_ZboZGno40CMvSR-bG79MSSL2e2dIKf63B1ew",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}revision",
+					"host": [
+						"{{url}}revision"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cobro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU29jaW9BIiwicGFzc3dvcmQiOiIxMjM0Iiwicm9sZSI6Mn0.gIvEO7_ZboZGno40CMvSR-bG79MSSL2e2dIKf63B1ew",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mesa",
+							"value": "me003",
+							"type": "text"
+						},
+						{
+							"key": "orden",
+							"value": "da5in",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}cobro",
+					"host": [
+						"{{url}}cobro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Orden",
+							"value": "yywoe",
+							"type": "text"
+						},
+						{
+							"key": "Nombre",
+							"value": "ElPepe",
+							"type": "text"
+						},
+						{
+							"key": "Mail",
+							"value": "ep@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "Descripcion",
+							"value": "muy buena atencion",
+							"type": "text"
+						},
+						{
+							"key": "Mesa",
+							"value": "7",
+							"type": "text"
+						},
+						{
+							"key": "Restaurante",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "Atencion",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "Cocina",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}review",
+					"host": [
+						"{{url}}review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Visualizar Logs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbTEyMyIsInJvbGUiOjF9.7xogljuQlVxhspY0tirqZuhzADjcOLpzFEsxgHlunJQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}logs",
+					"host": [
+						"{{url}}logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Habilitar Mesa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbTEyMyIsInJvbGUiOjF9.7xogljuQlVxhspY0tirqZuhzADjcOLpzFEsxgHlunJQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mesa",
+							"value": "me004",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}habilitar",
+					"host": [
+						"{{url}}habilitar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiQWRtaW4iLCJwYXNzd29yZCI6ImFkbTEyMyIsInJvbGUiOjF9.7xogljuQlVxhspY0tirqZuhzADjcOLpzFEsxgHlunJQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user",
+							"value": "45",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}del/user/48",
+					"host": [
+						"{{url}}del"
+					],
+					"path": [
+						"user",
+						"48"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
